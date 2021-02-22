@@ -1,0 +1,56 @@
+@charset 'utf-8';
+
+/* reset */
+*{margin: 0; padding: 0;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; outline: none;}
+
+body{
+    background: linear-gradient(to top, #b18bcc, #5a168a) no-repeat;
+    height: 1500px;
+}
+
+.main{
+    width: 800px; height: 800px;
+    margin: 5rem auto;
+    padding: 100px;
+    background: rgb(255, 222, 38);
+    border-radius: 50%;
+    text-align: center;
+}
+
+h1{
+    font-size: 80px;
+    font-family: 'Homemade Apple', cursive;
+    font-family: 'Parisienne', cursive;
+}
+
+h2{
+    font-family: 'Metal Mania', cursive;
+    font-family: 'Rosarivo', serif;
+}
+
+.more{
+    margin-top: 30px;
+}
+
+.more>a{
+    color:#b18bcc;
+    font-weight: bold;
+}
+.more>a:hover{
+    color:lightyellow;
+}
+
+.rabbit{
+    width: 300px;
+    height: 300px
+}
+
+.article_1,.article_2{
+    margin-top: 50px;
+}
+
+.front_container{
+    z-index: 2;
+}

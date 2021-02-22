@@ -1,0 +1,68 @@
+@charset 'utf-8';
+
+/* reset */
+*{margin: 0; padding: 0;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; outline: none;}
+
+body{
+    background: url('./img/pattern.png') repeat 0px 0px;
+}
+
+.main{
+    background: #fff;
+    width: 600px; height: 800px;
+    margin: 2rem auto;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    border-radius: 2%;
+    box-shadow: 3px 3px rgba(0,0,0,.25);
+}
+
+h1{
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Metal Mania', cursive;
+    font-family: 'Rosarivo', serif;
+}
+
+.crown{
+    margin: 50px;
+}
+
+.flower{
+    position: absolute;
+    top: 580px;
+    left: 400px;
+    z-index:1;
+}
+
+.article_1,.article_2{
+    width: 600px;
+    text-align: left;
+    position: absolute;
+    z-index: 2;
+    font: normal 18px/1.4;
+}
+
+.article_1{
+    bottom:300px;
+}
+.article_2{
+    bottom: 150px;
+}
+
+h2{
+    font-family: 'Homemade Apple', cursive;
+    font-family: 'Parisienne', cursive;
+}
+
+.more{
+    font-weight: bold;
+    position: absolute;
+    bottom: 80px;
+    right: 50px;
+    z-index: 3;
+}
+

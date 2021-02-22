@@ -1,0 +1,75 @@
+/* backgroundimage float이용해서 박스 움직이기*/
+
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+*{margin:0; padding:0;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; outline: none;}
+
+h1{
+    text-align: center;
+    font: 50px/1.5 'Gloria Hallelujah', cursive;
+    color: rgb(59, 58, 58);
+    margin-top: 20px;
+}
+
+.wrap_background{
+    display:block;
+    width: 100vw; height: 1000px;
+    background: url('../src/cloud.jpg') no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+}
+
+.wrap_background::after{
+    content: '';
+    display:block;
+    clear: both;
+}
+
+.wrap_boxcontainer{
+    width: auto;
+    position: relative;
+    top: 3vh;left:5vh;
+}
+
+.box1{
+    width: 40vh; height: 40vh;
+    background: rgb(255, 0, 0, .75);
+    position: absolute;
+}
+
+.box2{
+    width: 110vh; height: 40vh;
+    background: rgb(0, 0, 255, .75);
+    position: absolute;
+    left: 45vh; 
+}
+
+.box3{
+    width: 110vh; height: 40vh;
+    background: rgb(255, 255, 0, .75);
+    position: absolute;
+    top: 45vh;  
+}
+
+.box4{
+    width: 40vh; height: 40vh;
+    background: rgb(0, 128, 0, .75);
+    position: absolute;
+    top: 45vh; left: 115vh;
+}
+.box5{
+    width: 25vh; height: 85vh;
+    background:rgb(128, 0, 128, .75);
+    position: absolute;
+    left: 160vh;
+}
+
+/* 2020-02-18-목
+    float vs absolute면 absolute가 더 앞에 표시되는건가..
+    디스플레이상 하얀색 화면베젤 없게 표현하는 방법이 있을까..*/
+
+/* 2020-02-19-금
+    wrap_background에 fixed를 줘서 가로 스크롤 해결했어요! */

@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+/* reset */
+*{margin:0; padding:0;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; outline-style: none;}
+
+
+#reservation{
+    width:100%; height:100vh; background: #eee; padding:100px 0;
+}
+
+#reservation .inner{
+    width: 1180px; margin:0 auto; 
+}
+
+#reservation .inner h1{
+    font: bold 20px/1 'arial'; color:#555; margin-bottom:20px;
+}
+
+#reservation .inner .wrap{
+    width:100%;
+}
+
+#reservation .inner .wrap::after{
+    content:''; display:block; clear:both;
+}
+
+#reservation .inner .wrap article{
+    width: 580px; 
+    float: left; margin-right:20px; margin-bottom:20px;
+}
+
+#reservation .inner .wrap article:nth-of-type(2n){
+    margin-right:0
+}
+
+
+/* article 레이아웃 */
+#reservation .inner .wrap article .pic{
+    width:25%; height:120px; background-color:#aaa; float:left;
+}
+#reservation .inner .wrap article .content{
+    width: 75%; height:120px; background: #fff; float:left; padding: 20px; box-sizing: border-box;
+}
+#reservation .inner .wrap articel .content h2{
+    font:bold 10px/1 'arial'; color:#555; margin-bottom: 10px;
+}
+#reservation .inner .wrap article.content p{
+    font:8px/1.2 'arial'; color:#777; margin-bottom: 10px;
+}
+#reservation .inner .wrap article .content ul{
+    overflow: hidden;
+}
+#reservation .inner .wrap article .content ul li{
+    float: left
+}
+#reservation .inner .wrap article .content ul li a{
+    font-size: 14px; color:#999; display:inline-block; padding: 0 10px;
+    border-right: 1px solid #ccc;
+}
+#reservation .inner .wrap article .content ul li:last-child a{
+    border-right: none;
+}

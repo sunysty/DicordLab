@@ -1,0 +1,100 @@
+@charset 'utf-8';
+
+/* reset */
+*{margin:0; padding:0;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; outline-style: none;}
+
+body{
+    background: linear-gradient(rgb(5, 33, 193), rgb(54, 162, 189), rgb(160, 121, 32));
+}
+
+/* wrap */
+.wrap{
+    width: 145vh;
+    height: 50vh;
+    /* 중간에 오게 만들기 */ 
+    margin: 20vh auto;   
+    position:relative;
+
+}
+.wrap::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1{
+    display:block;
+    margin-bottom: 2vh;
+    font-family: serif;
+}
+
+.wrap1, .wrap2, .wrap3, .wrap4{
+    width: 70vh;
+    height: 20vh;
+    background: rgba(255, 255, 254, 0.287);
+    font: 16px/1.4 serif;
+}
+
+.wrap1:hover, .wrap2:hover, .wrap3:hover, .wrap4:hover{
+    background: rgba(204, 205, 209, 0.712);
+}
+
+.wrap2{
+    position: absolute;
+    top: 5.8vh;
+    right: 0;
+    }
+
+.wrap3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.wrap4{
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+
+img{ 
+    width: 20vh;
+    height: 20vh;
+    float: left;
+}
+
+img:hover{
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.textContents{
+    width: 50vh;
+    float: left;
+    padding:2.5vh;
+    box-sizing: border-box;
+}
+
+p{
+    margin-top: 1vh;
+    color: rgb(60, 65, 73);
+}
+
+.icons{
+    margin-top: 1vh;
+}
+
+li{
+    display: inline-block;
+    margin:0.5vh;
+}
+
+i{
+    color: rgb(60, 65, 73);
+}
+
+i:hover{
+    color: aqua;
+}
