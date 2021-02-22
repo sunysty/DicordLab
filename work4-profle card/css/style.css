@@ -14,19 +14,51 @@ a {
 	text-decoration: none;
 }
 
+/* wrap */
 .wrap{
-	width: 580px; height:800px; background: skyblue;
-	box-sizing: border-box;
-	position:absolute;
+	max-width: 580px; height:800px; 
+	position: absolute;
+	border-radius: 30px;
+	
 	font-family: 'Indie Flower', cursive;
 	font-family: 'Neucha', cursive;
+
+	margin: 80px;
+	float: left;
+}
+
+
+/* profile background */
+.ryan{
+	position: relative;
+	background: skyblue;
+}
+.apeach{
+	position: relative;
+	background: pink; 
+}
+.tube{
+	position: relative;
+	background: lemonchiffon;
+}
+.jayz{
+	position: relative;
+	background: grey;
+}
+.moziCon{
+	position: relative;
+	background: yellow;
+}
+.frodoNeo{
+	position: relative;
+	background: peru;
 }
 
 
 /* nav */
 .menu{
-	width: 560px; 
-	margin: 0 auto; padding: 50px 30px 10px 30px;
+	width: auto; 
+	margin: 0 auto; padding: 35px 40px;
 	box-sizing: border-box;
 }
 .menu::after{
@@ -34,91 +66,104 @@ a {
 }
 i:nth-of-type(1){
 	float:left;
-	font-size: 25px;
+	font-size: 30px;
 }
 i:nth-of-type(2){
 	float:right;
-	font-size: 25px;
+	font-size: 30px;
 }
 
+.menu>i:hover{
+	color: white;
+	transition: 0.3s;
+}
 
 /* article */
 .profile{
-	width: 560px; 
-	position: absolute; 
+	width: auto; 
+	position: relative; 
 	margin:10px 0;
 }
 .profile>img{
-	width: 260px; height:250px; 
+	width: 260px; height:250px; display: block; margin: 0 auto;
 	border-radius: 50%;
-	
-	position: relative; left: 50%; margin-left:-130px;
+}
+.profile>img:hover{
+	transition: 1s;
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 .profile>h1{
-	position: relative; left: 50%; margin-left:-75px; 
+	text-align: center;
 	margin-top: 20px;
 	font-size: 30px;
-	
 }
 .profile>span{
-	position: relative; left: 50%; margin-left:-115px;
-	
+	display: block; text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
+	color: rgba(34, 34, 34, 0.5);
 }
 .profile>a{
-	display: block;
-	width:250px; 
-	background: brown; border-radius: 30px;
-	position: relative; left:50%; margin-left: -135px;
-	margin-top:30px;
-
-	color: white;
-	font-size: 18px;;
-	text-align: center;
-	padding:10px;
-	/* left: 50%; margin-left: -100px;
-	margin-top: 50px; */
+	width: 100px; 
+	background: rgba(0, 0, 0, 0.5); border-radius: 30px; 
+	position: relative; 
+	margin: 30px auto; 
+	
+	display: block; 
+	text-align: center; 
+	padding:10px; 
+	font-size: 15px; 
+	color: white; 
 }
+.profile>a:hover{
+	transition: 0.5s;
+	background: rgba(0, 0, 0, 0.75); border-radius: 30px;   
+}
+
 
 /* contact */
 .contact{
-	width: 560px;
-	position: absolute; bottom:15%;
-	}
+	width: auto;
+	position: relative;
+}
 .contact>li{
-	padding:20px;
-	font-size:22px;
+	width:300px; margin: 0 auto;
+	padding:20px; font-size:22px; text-align:center;
 }
 .contact>li:nth-of-type(1){
-	position: relative; left:50%; margin-left: -155px;
-}
-.contact>li:nth-of-type(2){
-	width:300px; border-top: grey 2px solid;
-	position: relative; left:50%; margin-left: -160px;
+	border-bottom: rgba(34, 34, 34, 0.5) 2px solid;
 }
 .contact>li>i{
-	text-align: center;
-	margin-right:30px;
+	margin-left:20px;
 }
-.contact>li>span{
-	
+.contact>li:nth-of-type(1)>i{
+	padding-left: 5px;
 }
+
 
 /* nav */
 .others{
-	width:auto; height:auto;
-	position: absolute; bottom:5%; margin-left: 120px;
+	position: relative;
+	width: 350px; margin: 30px 50px;
 }
-
 .others::after{
-	content:''; display: block; clear:both;
+	content:''; display: block; clear :both;
 }
-
 .others>a{
 	display:block; 
 	width:50px; height:50px;
-	background: white;
+	background: rgba(255, 255, 255, 0.267);
 	border-radius: 50%;
-	
 	float:left;
 	margin-right: 50px;
+}
+.others>a:nth-of-type(4){
+	margin-right:-50px;
+}
+.others>a:hover{
+	transition: 0.3s; padding:5px;
+	background: url('../img/하트.PNG');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
 }
