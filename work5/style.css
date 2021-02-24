@@ -1,0 +1,58 @@
+/* reset */
+*{margin:0; padding:0;}
+ul,li,ol{list-style: none;}
+a{text-decoration: none; outline-style: none;}
+
+body{
+    
+}
+
+/* 전체 layout */
+#footer{
+    width:100%; color: grey; background: #444; 
+}
+
+#footer .inner{
+    width: 1180px; margin: 0 auto; 
+}
+
+
+/* upper */
+.upper{
+    width:100%; padding:20px 0; border-bottom: grey solid 2px;
+}
+.upper:after{
+    content:''; display:block; clear:both;
+}
+.upper .terms{
+    float:left; 
+}
+.upper .sns{
+    float:right;
+}
+.upper li{
+    display:inline-block; margin-right:20px; 
+}
+.upper li a{
+    color: grey ;
+}
+
+
+/* lower */
+.lower{
+    width:100%; padding: 20px 0 80px;
+}
+.lower:after{
+    content:''; display:block; clear:both;
+}
+.lower h1{
+    width:30%; float:left; 
+}
+.lower address{
+    width:70%; float:right; text-align: right; margin-bottom:10px; font: 15px/1.2 'arial';
+}
+.lower span{
+    width:70%; float:right;text-align: right;
+}
+
+/* inner에 적용안된이유-lower에 float해제를 안해서 */
