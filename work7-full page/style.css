@@ -1,0 +1,570 @@
+@charset 'uft-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap');
+/* reset */
+*{margin:0; padding:0;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; outline: 0;}
+
+/* 전체 layout */
+.body{
+    width:100%; 
+    font-family:'Noto Serif KR', serif;
+    background: #020205;
+    color:#efe;
+}
+.body::after{
+    content:'';display: block;clear: both;
+}
+
+
+/* header */
+#header{
+    width:1180px;
+    float:left;
+    position:fixed; left: 50%; transform:translate(-50%,0);
+    background: #020205;
+    z-index: 1;
+    
+}
+#header .inner{
+    width:100%; height:100px;    
+    position: relative;
+}
+
+#header .inner h1{
+    width:20%;
+    position:absolute; top:20px; left:50px;
+    text-align: center;
+}
+#header .inner h1 a{
+    font-size: 40px;
+    color: #efe;
+}
+#header .inner ul.gnb{
+    width:70%;
+    position:absolute; top:60px; left:290px;
+}
+#header .inner ul.gnb li{
+    width:20%;
+    float:left;
+    text-align: center;
+}
+#header .inner ul.gnb li:nth-child(5){
+    border: none;
+}
+#header .inner ul.gnb li a{
+    width:100%;
+    color:#efe;
+    transition:0.5s
+}
+#header .inner ul.gnb li a:hover{
+    padding-bottom: 10px;
+    border-bottom:solid 5px goldenrod;
+    color:goldenrod;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+#header .inner ul.util{
+    position: absolute;
+    top:0px; right:20px;
+}
+#header .inner ul.util li{
+    float:left;
+    padding:10px 10px;
+}
+#header .inner ul.util li a{
+    font-size:10px;
+    color:#efe;
+}
+#header .inner ul.util li a:hover{
+    color:goldenrod;
+}
+
+
+
+/* section1 */
+#section1{
+    width:1180px; height:600px;
+    margin: 0 auto; 
+    background: url('img/img2.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    position: relative; 
+    top: 100px; 
+}
+#section1:hover .inner article{
+    border: goldenrod solid 5px;
+    transition: ease-in 0.5s;
+    position:absolute;
+    color:goldenrod;
+}
+#section1 .inner{
+    width:100%; 
+}
+
+#section1 .inner article{
+    color:#efe;
+    position: absolute; 
+    top:80px; left:100px;
+    padding:30px; 
+    box-sizing: border-box; 
+    border:none;
+}
+
+#section1 .inner article span{
+    display:block;
+    font-size:15px;
+}
+#section1 .inner article h2{
+    font-size:50px;
+    margin-bottom:50px;
+}
+#section1 .inner article p{
+    font-size:20px;
+    margin-bottom:120px;
+    
+}
+#section1 .inner article a{
+    display: block;
+    width:150px;
+    padding:10px;
+    /* border-radius: 10px; */
+    font-size: 15px;
+    margin-bottom:20px;
+    color:#efe;
+}
+#section1 .inner article a:hover{
+    color:goldenrod;
+    background: #02020581;
+    border-radius: 20px;
+    font-weight: bold;
+    display: block;
+    transition: ease-in 0.5s;
+}
+#section1 .inner article a i{
+    padding-left:20px;
+}
+/* 1. 사진넘기는 효과 2. 상자뜨는 트렌지션 넣기 */
+
+
+/* section2 */
+#section2{
+    width:1180px; height:600px;
+    background: #020205;
+    margin:0 auto;
+    top:100px;
+    position: relative;  
+    transition:1s;
+}
+
+#section2:hover .right a{
+    text-align: right;
+    transition:ease 1s;
+}
+#section2 .inner{
+    width: 100%; 
+    position: absolute; 
+} 
+
+#section2:hover .inner::before{
+    content:'';
+    display:block;
+    width:500px; height:400px;
+    position:absolute; top:0px; right:0;
+    background: rgb(218, 165, 32);
+    opacity: 80%;
+    transition:ease 1s;
+} 
+
+
+/* before 가상요소 선택자로만든 박스 천천히뜨게(transition효과)하는 방법? */
+/* before 가상요소를 이용해서 꾸밈용 박스 두개이상 만드는 방법? */
+
+#section2 .inner .right{
+    width:30%; height:500px;
+    text-align: left;
+    padding:70px 50px 0 0;
+    /* border-right: #efe 1px solid; */
+    transition: 1s;
+    
+}
+
+#section2 .inner span{
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+#section2 .inner h2{
+    font-size: 30px;
+    margin-bottom:50px;
+}
+#section2 .inner p{
+    font-size: 15px;
+    margin-bottom: 100px;
+}    
+#section2 .inner a{
+    display:block;
+    font-size: 20px;
+    color:#efe;
+    margin-bottom:30px;
+    transition: 0.5s;
+}
+
+#section2 .inner a:hover{
+    border-bottom: goldenrod solid 5px;
+    color: goldenrod;
+}
+#section2 .inner .left{
+    width:60%; height:500px;
+    position: absolute;  
+    top:30px;right:60px;
+    background: url('./img/section2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* section3 */
+#section3{
+    width:1180px; height:600px;
+    margin: 0 auto;
+    top: 100px;
+    position: relative;
+    box-sizing: border-box;
+    border-top:#eee solid 3px;
+    /* background: lightgrey; */
+}
+#section3 .inner{
+    width: 100%; 
+    color:#eee;
+    position: absolute;
+    border:none;
+}
+#section3:hover{
+    border-top: goldenrod solid 5px;
+    border-right: goldenrod solid 5px;
+}
+#section3 .inner h2{
+    width:30px; height:100px;
+    position: absolute;
+    top:0; right:0;
+    padding:50px;
+    font-size:30px;
+    text-align: left;
+    transition: 0.5s;
+}
+#section3:hover .inner h2{
+    border-top: solid 200px rgba(218, 165, 0.75);
+    color:goldenrod;
+}
+#section3 .inner article{
+    padding:20px;
+    box-sizing: border-box;
+    font-family: arial;  
+    background: #02020541;
+}
+#section3 .inner article:hover{
+    border-bottom:goldenrod solid 3px;
+    border-left: goldenrod solid 3px;
+    color:#efe;
+    transition: 1s;
+}
+#section3 .inner article:nth-of-type(1){
+    width:25%; height:480px;
+    position:absolute;
+    top:60px;
+    right:250px;
+    z-index: 1;
+}
+#section3 .inner article:nth-of-type(2),
+#section3 .inner article:nth-of-type(3){
+    width:45%; height: 215px;
+    position: absolute;
+    top:60px;
+    left:60px;
+    text-align: right;
+}
+#section3 .inner article:nth-of-type(3){
+    top:325px;
+}
+
+#section3 .inner article h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#section3 .inner article span{
+    display: block;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+#section3 .inner article p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#section3 .inner article a{
+    display: block;
+    width:80px;
+    font-size: 15px;
+    font-weight: bold;
+    color:#020205;
+    position:absolute; 
+    right:0; bottom:0;
+    text-align: center;
+    padding:5px;
+    margin:10px; 
+    transition: 0.2s;
+}
+#section3 .inner article:hover a{
+    background: rgba(131, 133, 131, 0.75);
+    color:#020205;
+    border-radius: 30px;
+}
+
+
+/* section4 */
+#section4{
+    width:1180px; height:600px;
+    position:relative;
+    top:100px; 
+    margin:0 auto;
+}
+#section4 .inner{
+    width:100%; 
+    position: absolute;
+}
+#section4 .inner::after{
+    content:''; display:block; clear:both;
+}
+#section4 .inner article{
+    width:35%; 
+    float:left;
+    padding:50px;
+    border-right:#eee solid 5px; 
+    box-sizing: border-box;
+}
+#section4 .inner article:hover{
+    height:600px;
+    border-top: goldenrod solid 5px;
+    border-left: goldenrod solid 5px;
+    border-right:none;
+    box-sizing: border-box;
+    color: goldenrod;
+}
+#section4 .inner article:hover a{
+    border:goldenrod solid 3px;
+    box-sizing: border-box;
+}
+#section4 .inner article h2{
+    font-size: 30px;
+    margin-bottom:50px;
+}
+#section4 .inner article p{
+    font-size: 20px;
+    margin-bottom:70px;
+}
+#section4 .inner article a{
+    display:block;
+    width:130px; padding:20px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    color:#efe;
+    text-align: center;
+    box-sizing: border-box;
+}
+#section4 .inner article a:hover{
+    background: goldenrod;
+    color:#020205;
+}
+
+#section4 .inner figure{
+    width:65%; height:600px;
+    float:right;
+    padding:50px;
+    box-sizing: border-box;
+    border-bottom:#efe solid 5px;
+    opacity: 30%;
+    transition:ease-out 1s;
+}
+#section4 .inner figure:hover{
+    opacity: 100%;
+    color:#020205;
+    background:rgb(218, 165, 32,.75);
+    border-bottom:rgb(218, 165, 32,.75) solid 5px;
+    box-sizing: border-box;
+}
+#section4 .inner figure h2{
+    font-size:30px;
+    margin-bottom:30px;
+}
+#section4 .inner figure iframe{
+    width:600px; height:350px; 
+    margin-left:110px;
+    box-sizing: border-box;
+}
+
+
+/* section 5 */
+#section5{
+    width:1180px; height:700px;
+    margin: 0 auto;
+    position:relative;
+    top:100px;
+}
+
+#section5 .inner{
+    width:100%;  
+    position:absolute;
+    color:#eee;
+}
+#section5 .inner::after{
+    content:''; display:block; clear:both;
+}
+
+#section5 .inner h2{
+    width:33%; 
+    text-align: center;
+    font-size: 30px;
+    padding:20px;
+    box-sizing: border-box;
+    margin-bottom:50px;
+    transition: 1s;
+}
+#section5 .inner:hover h2{
+    border-left: goldenrod solid 15px;
+    color:goldenrod;
+}
+#section5 .inner .box{
+    float:left;
+    height:700px;
+}
+#section5 .inner .box:nth-of-type(2){
+    background: rgba(238, 239, 255, 0.25);
+}
+#section5 .inner .box .pic{
+    width:393px;
+    height:400px;
+    background: lightpink;
+}
+#section5 .inner .box:nth-of-type(1) .pic{
+    background: url('./img/section4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section5 .inner .box:nth-of-type(2) .pic{
+    background: url('./img/section4-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section5 .inner .box:nth-of-type(3) .pic{
+    background: url('./img/sectioni4-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section5 .inner .box h3{
+    font-size: 23px;
+    padding: 30px 0;
+    margin: 0 30px;
+    margin-bottom:30px;
+    border-bottom: #eee solid 2px;
+}
+#section5 .inner .box ul{
+    padding-bottom: 50px;
+}
+#section5 .inner .box:hover{
+    opacity: 90%;
+}
+#section5 .inner .box ul li{
+    margin-bottom: 20px;
+    margin: 0 30px;
+}
+
+#section5 .inner .box ul li a{
+    display:block;
+    font-size: 18px;
+    color:#eee;
+    padding:10px;
+    box-sizing: border-box;
+}
+#section5 .inner .box ul li:hover a{
+    background: #020205;
+    color:goldenrod;
+    opacity: 90%;;
+}
+#section5 .inner .box:nth-of-type(1) ul li:hover a,
+#section5 .inner .box:nth-of-type(3) ul li:hover a{
+    background: rgba(238, 239, 255, 0.25);
+}
+#section5 .inner .box ul li a::after{
+    content:''; display:block; clear:both;
+}
+#section5 .inner .box ul li a i{
+    display: block;
+    float: right;
+    font-size:22px;
+}
+
+
+/* Nav */
+#lowerNav{
+    width:1180px; height:400px;
+    margin: 0 auto;
+    position:relative;
+    top:300px;
+}
+#lowerNav .inner{
+    width:100%;
+    position: absolute;
+    
+}
+#lowerNav .inner::after{
+    content:''; display:block; clear:both;
+}
+#lowerNav .inner a{
+    display: block;
+    width:33.3%;
+    padding:20px 20px;
+    box-sizing: border-box;
+    font-size: 22px;
+    float: left;
+    color:#efe;
+    border: #eee solid 3px;;
+}
+
+#lowerNav .inner a:hover{
+    background: rgba(218, 165, 32, 0.479);
+}
+#lowerNav .inner a i{
+    float:right;
+    color:#efe;
+}
+
+/* footer */
+#footer{
+    width:1180px; height:500px;
+    margin:0 auto;
+    position:relative;
+}
+#footer .inner{
+    width:100%;
+    position: absolute;
+    top:300px;
+}
+#footer .inner ul{
+    padding: 50px 0;
+}
+#footer .inner ul li{
+    float:left;
+    border-right: solid #efe 1px;
+}
+#footer .inner ul li:nth-of-type(3){
+    border-right: none;
+}
+#footer .inner ul li a{
+    color:#efe;
+    padding:0 20px;
+}
+#footer .inner ul li a:hover{
+    color:goldenrod;
+}
