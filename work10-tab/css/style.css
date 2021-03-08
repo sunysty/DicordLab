@@ -1,0 +1,187 @@
+@charset 'utf-8';
+@import 'reset.css'; 
+.wrap::after{    content:''; display:block; clear:both; }
+
+body{
+    background: #ddd;
+    
+}
+
+#tab{
+    width:100%;
+}
+
+/* inner */
+#tab .inner{
+    width:1080px; margin: 100px auto;
+    position:relative;
+}
+#tab .inner h1{
+    font:bold 28px/1.2 'arial'; color:#444; text-align: center; 
+    margin-bottom: 10px;
+}
+#tab .inner p{
+    font:18px/1.5 'arial'; color:#888; text-align: center;
+    margin-bottom: 30px;
+}
+#tab .inner .btn{
+    font:bold 17px/1 'arial'; color:#ddd; text-align: center;
+    display:block; width:300px; height: 41px; padding-top:11px;  background: #444;
+    margin-left:50%; transform: translateX(-50%); box-sizing: border-box;
+}
+#tab .inner .btn:hover{
+    background: #ddd; border:#444 solid 3px; color:#444; box-sizing: border-box;
+}
+
+/* wrap */
+#tab .wrap{
+    width:1180px; margin:0 auto;
+}
+/* picBox */
+#tab .wrap .picBox{
+    width:50%; height:40vh; background: #444;
+    float:left; 
+    margin-right:10%; margin-top:10px;
+    overflow: hidden;
+}
+#tab .wrap .picBox::before{
+    content:''; display:block; 
+    width:100%; height:100%;
+    background: url('../img/insta6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition:all 1s;
+}
+#tab .wrap .picBox::after{
+    content:''; display:block; 
+    width:100%; height:100%;
+    background: linear-gradient(45deg,#333,#999);
+    opacity:0; transition:all 0.5s;
+}/* linear-gradient 왜 안되는 걸까요?ㅜㅜ */
+#tab .wrap:hover .picBox::before{
+    transform: scale(1.2);
+}
+#tab .wrap:hover .picBox::after{
+    opacity:1;
+}
+
+/* contentBox */
+#tab .wrap .contentBox{
+    width:40%;
+    float:left;
+}
+#tab .wrap .contentBox article{
+    width:100%;
+    margin-bottom: 30px;
+}
+#tab .wrap .contentBox article::after{
+    content: ''; display:block; clear: both;
+}
+#tab .wrap .contentBox article .ico{
+    width:100px; height:100px; border-radius:50%; background:#000;
+    float:left;
+    margin-right:25px; transform: translateY(15px);
+}
+#tab .wrap .contentBox article:nth-child(1) .ico:hover{
+    opacity:0.25; 
+    transform:scale(1.1);
+    transition:all 0.5s;
+}
+#tab .wrap .contentBox article:nth-child(2) .ico:hover{
+    border:solid 3px black; box-sizing: border-box; background:rgba(0, 0, 0, 0.205);
+    transition:all 0.3s;
+}
+#tab .wrap .contentBox article:nth-child(3) .ico:hover{
+    transform: scale(0.9);
+    transition:all 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px;
+}
+#tab .wrap .contentBox article h2{
+    display:block; width:calc(100% - 125px);
+    font: bold 23px/1.5 'arial'; color:#444; 
+    float:left;
+    margin-bottom:10px;
+}
+#tab .wrap .contentBox article p{
+    display:block; width:calc(100% - 125px);
+    font:18px/1.2 'arial'; 
+    float:left;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+/* tablet */
+@media screen and (max-width:1179px){
+    /* inner */
+    #tab .inner{ width:100%; }
+    #tab .inner h1{ font-size:23px; color:rgb(60, 108, 212); }
+    #tab .inner p{ font-size:15px; color:rgb(60, 108, 212);}
+    #tab .inner .btn{ font-size:13px; width:200px; height: 37px; background: rgb(60, 108, 212); }
+    #tab .inner .btn:hover{ border:rgb(60, 108, 212) solid 3px; color:rgb(60, 108, 212); box-sizing: border-box;}
+
+    /* wrap */
+    #tab .wrap{ width:100%; padding:0 30px; }
+
+    /* picBox */
+    #tab .wrap .picBox{  width:45%;  }
+
+    /* contentBox */
+    #tab .wrap .contentBox{ width:40%; }
+    #tab .wrap .contentBox article .ico{
+        width:80px; height:80px; background:rgb(60, 108, 212);
+        margin-right:15px; transform: translateY(8px);
+    }
+    #tab .wrap .contentBox article:nth-child(2) .ico:hover{
+        border:solid 3px rgb(60, 108, 212); background:rgba(60, 108, 212, 0.5);
+    }
+    #tab .wrap .contentBox article:nth-child(3) .ico:hover{
+        box-shadow: rgba(114, 103, 238, 0.5) 10px 10px 10px;
+    }
+    #tab .wrap .contentBox article h2{
+        width:calc(100% - 115px);
+        font-size:20px; color:rgb(60, 108, 212); 
+        float:left;
+        margin-bottom:10px;
+    }
+    #tab .wrap .contentBox article p{
+        width:calc(100% - 115px);
+        font-size:15px; color:rgb(60, 108, 212);
+    }
+}
+
+/* mobilet */
+@media screen and (max-width:539px){
+    /* inner */
+    #tab .inner{ width:100%; }
+    #tab .inner h1{ font-size:20px; color:rgb(110, 39, 243); }
+    #tab .inner p{ font-size:13px; color:rgb(110, 39, 243); padding:0 20px; }
+    #tab .inner .btn{ font-size:13px; width:200px; height: 37px; background: rgb(110, 39, 243); }
+    #tab .inner .btn:hover{ border:rgb(110, 39, 243) solid 3px; color:rgb(110, 39, 243); }
+
+    /* wrap */
+    #tab .wrap{ width:100%; }
+
+    /* picBox */
+    #tab .wrap .picBox{ width:100%; height:30vh; float:none; margin-bottom:50px; }
+
+    /* contentBox */
+    #tab .wrap .contentBox{ width:100%; float:none;}
+    #tab .wrap .contentBox article .ico{
+        width:60px; height:60px; background:rgb(110, 39, 243);
+        margin-right:15px; transform: translateY(20px);
+    }
+    #tab .wrap .contentBox article:nth-child(2) .ico:hover{
+        border:solid 3px rgb(110, 39, 243); background:rgb(110, 39, 243, 0.5);
+    }
+    #tab .wrap .contentBox article h2{
+        width:calc(100% - 115px);
+        font-size:18px; color:rgb(110, 39, 243);
+        margin-bottom:5px;
+    }
+    #tab .wrap .contentBox article p{
+        width:calc(100% - 115px);
+        font-size:14px; color:rgb(110, 39, 243);
+    }
+}
