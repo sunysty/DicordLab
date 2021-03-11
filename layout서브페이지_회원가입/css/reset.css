@@ -1,0 +1,8 @@
+/* reset */
+
+*{ margin:0px; padding:0px; }
+ol,ul,li{ list-style:none; }
+a{ text-decoration: none; outline:0; }
+fieldset { border:none; }
+.h { position:absolute; top:-9999px; width:1px; height:1px; opacity:0; overflow:hidden; }
+textarea{ resize:none; outline:0; }
