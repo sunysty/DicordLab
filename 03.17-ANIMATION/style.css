@@ -1,0 +1,87 @@
+@charset 'utf-8';
+
+*{margin:0; padding:0;}
+ul,ol,li{list-style:none;}
+a{text-decoration:none;}
+
+body{
+    background:lightblue;
+    animation:body linear 10s infinite;
+}
+
+
+.town{position:relative;
+    width:1000px; height:400px; margin:200px auto; border:1px solid #000;}
+
+.town .day{
+    width:100%; height:100%; background:lightblue;
+    position:absolute; top:0; left:0; transition:all 2s;
+}
+.town .night{
+    width:100%; height:100%; background:#000;
+    position:absolute; top:0; left:0; transition:all 2s;
+    animation:day 2s linear 2 alternate infinite;
+}
+
+/* alternate : 모션이 0% 에서 100%로 끝난후 */
+
+
+.sky{
+    width:1000px; height:400px; border:1px solid red; position:relative; 
+    margin:0 auto;
+}
+
+.cloud{
+    width:200px; height:100px; background:pink;
+    position:absolute; top:100px; left:100px; transition:all 3s;
+}
+.sun{
+    width:100px; height:100px; border-radius:50%; background:red; position:absolute; top:0; left:50%; margin-left:-50px; 
+    text-align:center; color:#fff;
+    transition: all 1s; 
+    transform-origin:center 300px;
+    animation: sun 10s linear infinite; 
+}
+
+
+.people{width:1000px; height:200px; margin:0 auto;}
+.bike{
+    width:100px; height:50px; background:gold; 
+    position:absolute;
+    left:0; top:0; animation:bike 10s linear infinite;
+}
+
+
+.sky:hover .cloud{left:100%; opacity:0;}
+
+@keyframes bike{
+    0%{ left:0; }
+    50%{ left:100%; }
+    100%{ left:0; }
+}
+
+@keyframes sun{
+    0%{ opacity:0; transform:rotate(-90deg); }
+    25%{ opacity:1; }
+    50%{ opacity:1; }
+    75%{ opacity:0; transform:rotate(90deg); }
+    100%{ opacity:0;}
+}
+
+@keyframes cloud{
+    0%{ opacity:1; left:0; }
+    75%{ }
+}
+@keyframes day{
+    0%{opacity:1;}
+    25%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:0;}
+}
+
+@keyframes body{
+    0%{background:grey;}
+    25%{background:#333;}
+    50%{background:#ddd;}
+    100%{background:gray;}
+}
