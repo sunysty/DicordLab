@@ -1,0 +1,33 @@
+@charset 'utf-8'; 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+@import 'reset';
+@import 'color';
+@import 'font';
+ 
+
+body{
+    background:$bgBodyColor; 
+}
+body .item{
+    width:300px; 
+    padding:20px; 
+    box-sizing:border-box; 
+    background:$bgBoxColor; 
+    border-radius:10px; 
+    float:left;  box-shadow:5px 5px 20px #ddd; 
+    margin:20px; 
+}
+body .item h2{
+    color:$titleColor; 
+    font-size:$fontBig; 
+    font-family:$font;
+}
+body .item p{
+    color:$contentColor; 
+    font-size:$fontMid; 
+    font-family:$contentFont; 
+}
+body .item a{
+    color:$linkColor; font-size:$fontSmall; 
+}
