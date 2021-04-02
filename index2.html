@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="id">
+        <article></article>
+    </section>
+    <script>
+    //  article.item> div <a href="https://www.nate.com" target="_blank">네이트로 이동</a> 
+    
+    var new_article = document.createElement("article");
+    var new_div = document.createElement("div");
+    var new_a = document.createElement("a");
+    
+    var new_href = document.creatAttribute("href");
+    var new_target = document.createAttribute("target");
+
+    new_href.value = "https://www.nate.com";
+    new_target.value = "_blank";
+    new_article.classList.add("item");
+
+    new_a.setAttributeNode(new_href);
+    new_a.setAttributeNode(new_target);
+    new_a.innerText = "네이트로이동";
+
+    new_div.appendChild(new_a);
+    new_article.appendChild(new_div);
+    wrap.appendChild(new_article);
+    </script>
+</body>
+</html>
