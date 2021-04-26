@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼인증</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <section>
+        <div class="inner">            
+
+            <form action="result.html" method="get">
+                <fieldset>
+                    <legend>PASSWORD</legend> 
+
+                    <article class="pwd">
+
+                        <label for="pwd1">Password</label>
+                        <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요">
+                        <br>
+                        <label for="pwd2">Re Password</label>
+                        <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력하세요">
+                    </article>
+                    <input type="reset" value="CANCEL">
+                    <input type="submit" value="COMFIRM">
+
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
