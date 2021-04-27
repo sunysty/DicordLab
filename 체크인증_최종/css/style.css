@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+ol, ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+fieldset {
+  border: none; }
+
+input {
+  outline: 0; }
+
+body {
+  background: rgba(228, 250, 255, 0.9); }
+
+section {
+  width: 400px;
+  background: #fff;
+  margin: 100px auto;
+  padding: 70px 50px 60px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.03); }
+  section legend {
+    font: 45px/1 'Roboto';
+    color: #555;
+    margin-bottom: 40px; }
+    section legend::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: #999;
+      margin-top: 20px; }
+  section .userid label, section .pwd label, section .comments label {
+    display: block;
+    margin-bottom: 10px;
+    color: #999; }
+  section .userid textarea, section .pwd textarea, section .comments textarea {
+    resize: none; }
+  section .userid input[type=text], section .userid input[type=password], section .userid textarea, section .pwd input[type=text], section .pwd input[type=password], section .pwd textarea, section .comments input[type=text], section .comments input[type=password], section .comments textarea {
+    width: 100%;
+    background: #f5ffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    transition: 1s; }
+    section .userid input[type=text]::placeholder, section .userid input[type=password]::placeholder, section .userid textarea::placeholder, section .pwd input[type=text]::placeholder, section .pwd input[type=password]::placeholder, section .pwd textarea::placeholder, section .comments input[type=text]::placeholder, section .comments input[type=password]::placeholder, section .comments textarea::placeholder {
+      color: skyblue; }
+    section .userid input[type=text]:focus, section .userid input[type=password]:focus, section .userid textarea:focus, section .pwd input[type=text]:focus, section .pwd input[type=password]:focus, section .pwd textarea:focus, section .comments input[type=text]:focus, section .comments input[type=password]:focus, section .comments textarea:focus {
+      border: 1px solid #1aabff;
+      background: #e6faff; }
+    section .userid input[type=text].error, section .userid input[type=password].error, section .userid textarea.error, section .pwd input[type=text].error, section .pwd input[type=password].error, section .pwd textarea.error, section .comments input[type=text].error, section .comments input[type=password].error, section .comments textarea.error {
+      background: #ffeafe;
+      border: 1px solid #ff24ff; }
+  section .gender, section .hobby {
+    margin-bottom: 10px; }
+    section .gender h2, section .hobby h2 {
+      font: normal 16px/1 'arial';
+      color: #888;
+      margin-bottom: 10px; }
+    section .gender p, section .hobby p {
+      font: 12px/1 '맑은 고딕';
+      color: hotpink;
+      display: none; }
+    section .gender input, section .hobby input {
+      margin-right: 3px;
+      margin-left: 5px; }
+  section input[type=reset] {
+    width: 100%;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #fff;
+    background: linear-gradient(45deg, #c5c5c5, #818181);
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.1);
+    font: bold 12px/1 'arial';
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s; }
+    section input[type=reset]:hover {
+      opacity: 1;
+      transform: scale(1.05); }
+  section input[type=submit] {
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #fff;
+    background: linear-gradient(45deg, #52f9ff, #25b0fd);
+    box-shadow: 3px 6px 10px rgba(19, 200, 255, 0.4);
+    opacity: 0.8;
+    transition: 0.5s;
+    border-radius: 4px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    font: bold 12px/1 'arial'; }
+    section input[type=submit]:hover {
+      opacity: 1;
+      transform: scale(1.05); }
+
+/*# sourceMappingURL=style.css.map */
